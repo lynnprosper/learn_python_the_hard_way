@@ -1,12 +1,14 @@
-days = "Mon Tue Wed Thu Fri Sat Sun"
-months = "Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug"
+tabby_cat = "I'm tabbed in."
+persian_cat = "I'm split\non a line."
+backslash_cat = "I'm  \\a \\\ cat."
 
-print ("Here are the days: ", days)
-print ("Here are the months: ", months)
-
-print("""
-	There's something going on here.
-	With the three double-quotes.
-	We'll be able to type as much as we like.
-	Even 4 lines if we want, or 5, or 6.
-	""")
+fat_cat = """
+I'll do a list:
+\t* Cat food
+\t* Fishes
+\t* Catnip\n\t* Grass
+"""
+print (tabby_cat)
+print (persian_cat)
+print (backslash_cat)
+print (fat_cat)
