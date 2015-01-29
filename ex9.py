@@ -1,21 +1,14 @@
 from sys import argv
 
-script, user_name = argv
-prompt = '>'
+scirpt, filename = argv
 
-print ("Hi %s, I'm the %s script." % (user_name, script))
-print ("I'd like to ask you a few questions.")
-print ("Do you like me %s?" % user_name)
-likes = input(prompt)
+txt = open(filename)
 
-print ("Where do you live %s?" % user_name)
-lives = input(prompt)
+print ("Here's your file %r:" % filename)
+print (txt.read())
 
-print ("What kind of computer do you have?")
-computer = input(prompt)
+print ("Type the filename again:")
+file_again = input(">")
 
-print ("""
-	Alright, so you said %r about liking me.
-	You live in %r. Not sure where that is.
-	And you have a %r computer. Nice.
-	""" % (likes, lives, computer))
+txt_again = open(file_again)
+print (txt_again.read())
