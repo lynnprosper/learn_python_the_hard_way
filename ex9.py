@@ -1,18 +1,17 @@
-from sys import argv
-from os.path import exists
-
-script, from_file, to_file = argv
-
-print ("Copying from %s to %s" % (from_file, to_file))
-
-indata = open(from_file).read()
-
-print ("The input file is %d bytes long" % len(indata))
-
-print ("Does the output file exist? %r" %exists(to_file))
-print ("Ready, hit RETURN to continue, CTRL-C to abort.")
-input()
-
-out_file = open(to_file, 'w').write(indata)
-
-print ("Alright, all done.")
+def print_two(*args):
+	arg1, arg2 = args
+	print ("arg1: %r, arg2: %r" % (arg1, arg2))
+	
+def print_two_again(arg1, arg2):
+	print("arg1: %r, arg2: %r" % (arg1, arg2))
+	
+def print_one(arg1):
+	print("arg1: %r" % arg1)
+	
+def print_none():
+	print("I got nothin'.")
+	
+print_two("Zed", "Shaw")
+print_two_again("Zed", "Shaw")
+print_one("First!")
+print_none()
