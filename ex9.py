@@ -1,30 +1,35 @@
-def add(a, b):
-	print("ADDING %d + %d" % (a, b))
-	return a + b
+print("Let's practice everything.")
+print('You\'d need to know \'bout escapes with \\ that do \n newlines and \t tabs.')
+
+poem = """
+\tThe lovely world
+with logic so firmly planted
+cannot discern \n the needs of love
+nor comprehend passion from intuition
+and requires an explanation
+\n\t\twhere there is none.
+"""
+
+print("---------------")
+print(poem)
+print("------------------")
+
+five = 10 - 2 + 3 - 6
+print("This should be five: %s" % five)
+
+def secret_formula(started):
+	jelly_beans = started * 500
+	jars = jelly_beans / 1000
+	crates = jars / 100
+	return jelly_beans, jars, crates
 	
-def subtract(a, b):
-	print("SUBTRACTING %d - %d" % (a, b))
-	return a - b
-	
-def multiply(a, b):
-	print("MULTIPLYING %d * %d" % (a, b))
-	return a * b 
-	
-def divide(a, b):
-	print("DIVIDING %d / %d" % (a, b))
-	return a / b 
-	
-print("Let's do some math with just functions!")
+start_point = 10000
+beans, jars, crates = secret_formula(start_point)
 
-age = add(30, 5)
-height = subtract(78, 4)
-weight = multiply(90, 2)
-iq = divide(100, 2)
+print("With a starting point of: %d" % start_point)
+print("We'd have %d beans, %d jars, and %d crates." % (beans, jars, crates))
 
-print("Age: %d, Height: %d, Weight: %d, IQ: %d" % (age, height, weight, iq))
+start_point = start_point / 10
 
-print("Here is a puzzle.")
-
-what = add(age, subtract(height, multiply(weight, divide(iq, 2))))
-
-print("That becomes: ", what, "Can you do it by hand")
+print("We can also do that this way:")
+print("We'd have %d beans, %d jars, and %d crates." % secret_formula(start_point))
