@@ -1,22 +1,49 @@
-ten_things = "Apples Oranges Crows Telephone Light Sugar"
+states = {
+'Oregon' : 'OR',
+'Florida': 'FL',
+'California': 'CA',
+'New York': 'NY',
+'Michigan': 'MI'
+}
 
-print("wait there's not 10 things in that list, let's fix that.")
+cities = {
+'CA': 'San Francisco',
+'MI': 'Detroit',
+'FL': 'Jacksonville'
+}
 
-stuff = ten_things.split(' ')
-more_stuff = ["Day", "Night", "Song", "Frisbee", "Corn", "Banana", "Girl", "Boy"]
+cities['NY'] = 'New York'
+cities['OR'] = 'Portland'
 
-while len(stuff) != 10:
-	next_one = more_stuff.pop()
-	print ("Adding: ", next_one)
-	stuff.append(next_one)
-	print("There's %d items now." % len(stuff))
+print ('-' * 10)
+print ("NY State has: ", cities['NY'])
+print ("OR State has: ", cities['OR'])
+
+print ('-' * 10)
+print ("Michigan's abbreviation is: ", states['Michigan'])
+print ("Florida's abbreviation is: ", states['Florida'])
+
+print ('-' * 10)
+print ("Michigan has: ", cities[states['Michigan']])
+print ("Florida has: ", cities[states['Florida']])
+
+print ('-' * 10)
+for state, abbrev in states.items():
+	print ("%s is abbreviated %s" % (state, abbrev))
 	
-print ("There we go: ", stuff)
+print ('-' * 10)
+for abbrev, city in cities.items():
+	print ("%s has the city %s" % (abbrev, city))
+	
+print ('-' * 10)
+for state, abbrev in states.items():
+	print ("%s state is abbreviated %s and has city %s" % (state, abbrev, cities[abbrev]))
+	
+print ('-' * 10)
+state = states.get('Texas', None)
 
-print ("Let's do some things with stuff.")
-
-print (stuff[1])
-print (stuff[-1])
-print (stuff.pop())
-print (' '.join(stuff)) # what? cool!
-print ('#'.join(stuff[3:5]))
+if not state:
+	print ("Sorry, no Texas.")
+	
+city = cities.get('TX', 'Does Not Exist')
+print ("The city for the state 'TX' is: %s" % city)
