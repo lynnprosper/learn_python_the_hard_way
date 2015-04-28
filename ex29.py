@@ -157,7 +157,7 @@ class EscapePod(Scene):
 			print ("into jam jelly.")
 			return 'death'
 		else:
-			print ("You jump into pod $s and hit the eject button." % guess)
+			print ("You jump into pod %s and hit the eject button." % guess)
 			print ("The pod easily slides out into space heading to")
 			print ("the planet below. As it flies to the planet, you look")
 			print ("back and see your ship implode then explode like a")
